@@ -9,30 +9,7 @@ Examples of C++-Python interoperability using Thrift services based on SWIG.
 
 The test case considered in this repository is related to the following [Thrift service](https://github.com/xEnVrE/thrift-cpp-python-interop/blob/master/cpp_library/src/thrift/service.thrift) definition:
 
-```
-struct YarpMatrix
-{
-}
-(
-    yarp.name="yarp::sig::Matrix"
-    yarp.includefile="yarp/sig/Matrix.h"
-)
-
-struct YarpVector
-{
-}
-(
-    yarp.name="yarp::sig::Vector"
-    yarp.includefile="yarp/sig/Vector.h"
-)
-
-service Service
-{
-    list<YarpMatrix> get_poses();
-    YarpVector get_position();
-    double get_distance();
-}
-```
+https://github.com/xEnVrE/thrift-cpp-python-interop/blob/737b10e39b225853b42d0c9009c973f9631cf9a3/cpp_library/src/thrift/service.thrift#L1-L22
 
 where the service `Service` offers three methods:
 - `get_poses` returns a list of `yarp::sig::Matrix` 4x4 matrices representing poses
@@ -81,7 +58,7 @@ https://github.com/xEnVrE/thrift-cpp-python-interop/blob/d765eb1868e2c9875dcf7bd
 > cd thrift-cpp-python-interop/samples/cpp-client
 > mkdir build && cd build
 > make
-> ./bin/tcpi-cpp-client
+> ./tcpi-cpp-client
 > ```
 > The client opens an RPC port `/tcpi/cpp-client/rpc:o`.
 
@@ -92,7 +69,7 @@ https://github.com/xEnVrE/thrift-cpp-python-interop/blob/d765eb1868e2c9875dcf7bd
 > cd thrift-cpp-python-interop/samples/cpp-server
 > mkdir build && cd build
 > make
-> ./bin/tcpi-cpp-server
+> ./tcpi-cpp-server
 > ```
 > The server opens an RPC port `/tcpi/cpp-server/rpc:i`.
 
