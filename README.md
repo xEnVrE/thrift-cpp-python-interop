@@ -47,7 +47,7 @@ https://github.com/xEnVrE/thrift-cpp-python-interop/blob/d765eb1868e2c9875dcf7bd
 > Note: the names of the target can be changed in the following:
 
 > https://github.com/xEnVrE/thrift-cpp-python-interop/blob/d765eb1868e2c9875dcf7bdf6742bc1193cd0abc/cpp_library/CMakeLists.txt#L3
-https://github.com/xEnVrE/thrift-cpp-python-interop/blob/d765eb1868e2c9875dcf7bdf6742bc1193cd0abc/cpp_library/src/CMakeLists.txt#L1
+> https://github.com/xEnVrE/thrift-cpp-python-interop/blob/d765eb1868e2c9875dcf7bdf6742bc1193cd0abc/cpp_library/src/CMakeLists.txt#L1
 
 ### Write a client/server node in C++
 
@@ -74,6 +74,13 @@ https://github.com/xEnVrE/thrift-cpp-python-interop/blob/d765eb1868e2c9875dcf7bd
 > The server opens an RPC port `/tcpi/cpp-server/rpc:i`.
 
 ## Use the service in a Python project
+
+https://github.com/xEnVrE/thrift-cpp-python-interop/blob/3baa092e12beb76734ccf07f04f1b3d246e6c6b3/samples/python-client/client.py#L2
+
+> Note: the names of the library can be changed in the following:
+
+> https://github.com/xEnVrE/thrift-cpp-python-interop/blob/3baa092e12beb76734ccf07f04f1b3d246e6c6b3/python_library/tcpi-python-types.i#L1
+> https://github.com/xEnVrE/thrift-cpp-python-interop/blob/3baa092e12beb76734ccf07f04f1b3d246e6c6b3/python_library/CMakeLists.txt#L6
 
 ### Write a client/server node in Python
 
