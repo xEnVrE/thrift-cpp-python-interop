@@ -43,9 +43,10 @@ set(CMAKE_SWIG_FLAGS "-py3;-O;-threads")
 swig_add_library(${LIBRARY_TARGET_NAME}
                  LANGUAGE python
                  SOURCES ${SWIG_BINDINGS_SOURCE_FILE})
+set_property(TARGET ${LIBRARY_TARGET_NAME} PROPERTY SWIG_USE_TARGET_INCLUDE_DIRECTORIES TRUE)
 
 # Link libraries
-swig_link_libraries(${LIBRARY_TARGET_NAME} ThriftCppPythonInterop::ThriftCppPythonInterop Python3::Python YARP::YARP_os YARP::YARP_sig)
+target_link_libraries(${LIBRARY_TARGET_NAME} ThriftCppPythonInterop::ThriftCppPythonInterop Python3::Python YARP::YARP_os YARP::YARP_sig)
 
 # Include directories
 target_include_directories(${SWIG_MODULE_${LIBRARY_TARGET_NAME}_REAL_NAME} BEFORE PRIVATE ${Python3_INCLUDE_DIRS})
