@@ -1,5 +1,5 @@
 # thrift-cpp-python-interop
-Examples of C++-Python interoperability using Thrift services based on SWIG.
+Examples of C++-Python interoperability using Thrift services based on SWIG and YARP.
 
 ## Requirements
 - [YARP](https://yarp.it/latest/) compiled with Python bindings
